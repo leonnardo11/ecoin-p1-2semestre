@@ -9,6 +9,7 @@
 
 header {
   height: 55vh;
+  position: relative;
 }
 
 header video {
@@ -23,7 +24,7 @@ header video {
 }
 .wrapper {
   background: #171c24;
-  position: fixed;
+  position: relative;
   width: 100%;
 }
 .wrapper nav {
@@ -77,6 +78,10 @@ nav .content .links {
 }
 .wrapper .menu-icon {
   display: none;
+}
+
+.wrapper #show-search:checked ~ .search-icon i::before{
+  content: "\f00d";
 }
 .wrapper .search-box {
   position: absolute;
@@ -136,7 +141,7 @@ nav .content .links {
   transition: all 0.3s ease;
 }
 .content .links ul li a {
-  display: block;
+  display: inline-block;
   width: 100%;
   line-height: 30px;
   border-radius: 0px !important;
@@ -179,7 +184,7 @@ nav .content .links {
     content: "\f00d";
   }
   nav .content .links {
-    display: block;
+    display: inline-block;
     position: fixed;
     background: #14181f;
     height: 100%;
@@ -202,7 +207,7 @@ nav .content .links {
   .content .links li label {
     line-height: 40px;
     font-size: 20px;
-    display: block;
+    display: inline-block;
     padding: 8px 18px;
     cursor: pointer;
   }
@@ -212,7 +217,7 @@ nav .content .links {
  
   .content .links ul,
   .content .links ul ul {
-    position: static;
+    position: relative;
     opacity: 1;
     visibility: visible;
     background: none;
@@ -289,8 +294,8 @@ main h1:nth-child(1) {
 .products {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1500px;
-  margin: auto;
+  width: 1800px;
+  margin-left: 3%;
 }
 
 .card::before {
