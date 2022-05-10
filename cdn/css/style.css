@@ -2,8 +2,12 @@
 
 * {
   font-family: "Inter", sans-serif;
-  padding: 0;
+ padding: 0;
   margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  
 }
 
 body {
@@ -13,10 +17,11 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  overflow-x: hidden;
 
 }
 
-h1 {
+.login-h1 {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
@@ -24,11 +29,11 @@ h1 {
   color: #f77e09;
 }
 
-p {
+.login-p {
   color: white;
 }
 
-form input {
+.login-form input {
   width: 450px;
   height: 45px;
   background: #f5f7f9;
@@ -42,11 +47,11 @@ form input {
 
 
 
-p:nth-of-type(2) { 
+.login-text p:nth-of-type(2) { 
     padding-top: 15px;
 }
 
-p:nth-of-type(3) { 
+.login-text p:nth-of-type(3) { 
     position: absolute;
     bottom: 50px;
     display: block;
@@ -54,12 +59,12 @@ p:nth-of-type(3) {
     width: 55%;
 }
 
-a{
+.login-text a{
     color: #f77e09;
     text-decoration: none;
 }
 
-button {
+.login-form button {
   width: 150px;
   height: 45px;
   left: 167px;
@@ -72,29 +77,29 @@ button {
   font-size: 20px;
 }
 
-button:hover {
+.login-form button:hover {
   cursor: pointer;
   transform: scale(1.03);
   margin-left: 5px;
 }
 
-form input:focus {
+.login-form input:focus {
     transform: scale(1.01);
     margin-left: 3px;
 }
 
-.container {
+.container-login {
   display: flex;
 }
 
-.text {
+.login-text {
   order: 1;
   padding: 10%;
-  margin: 25px;
   position: relative;
+  margin-bottom: 0px;padding-bottom: 0px;padding-top: 150px;
 }
 
-.text p {
+.login-text p {
     font-family: "Inter";
     font-style: normal;
     font-weight: 300;
@@ -104,16 +109,254 @@ form input:focus {
     padding: auto;
   }
 
-.image {
+.login-image {
   order: 2;
 }
 
-.image img {
+.login-image img {
   height: 99.5vh;
   transition: 0.5s;
   transform: scale(1.01);
 }
 
-.image img:hover {
+.login-image img:hover {
   padding-left: 5px;
+}
+
+
+/* INICIO DO INDEX */
+
+nav{
+  background: #333547;
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: #f77e09;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+a.active,a:hover{
+  background: #f77e09;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 40vh;
+    height: 100vh;
+    background: #333547;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #f77e09;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+
+.main-video video {
+  width: 100vw;
+  height: 55vh;
+  object-fit: cover;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.main-video h1{
+  color: white;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+main h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  color: #f77e09;
+  padding-left: 3.5%;
+}
+
+main h1:nth-child(1) {
+  padding-top: 2%;
+}
+
+
+
+.card {
+  position: relative;
+  width: 250px;
+  height: 500px;
+  background: #191919;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin-left: 2.5%;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  background: #2c2a2a;
+  transform: skewY(345deg);
+  transition: 0.4s;
+}
+
+.card:hover::before {
+  top: -70%;
+  transform: skewY(380deg);
+}
+
+.card::after {
+  content: "ECOIN";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 5em;
+  color: rgba(247, 126, 9, 0.1);
+}
+
+.card .imgBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1;
+}
+
+.card .contentBox {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.card .contentBox h3 {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card .contentBox .price {
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.card .contentBox .buy {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: #000000;
+  text-decoration: none;
+  background: #f77e09;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+.card:hover .contentBox .buy {
+  top: 0;
+  opacity: 1;
+}
+
+.product {
+  height: 300px;
+  width: auto;
+}
+
+footer {
+  height: 7vh;
+  width: 100vw;
+  position: relative;
+  background: #333547;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+footer p{
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 20px;
 }

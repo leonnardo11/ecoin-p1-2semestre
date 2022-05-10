@@ -4,57 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index</title>
-    <link rel="stylesheet" href="/cdn/css/index.css">
+    <title>Index - ECOIN</title>
+    <link rel="stylesheet" href="cdn/css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   </head>
   <body>
     <header>
-      <div class="wrapper">
-        <nav>
-          <input type="checkbox" id="show-search">
-          <input type="checkbox" id="show-menu">
-          <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
-          <div class="content">
-          <div class="logo"><a href="#">ECOIN</a></div>
-            <ul class="links">
-              <li>
-                <a href="#" class="desktop-link">Categorias</a>
-                <input type="checkbox" id="show-services">
-                <label for="show-services">Categorias</label>
-                <ul>
-                  <li>
-                    <a href="#" class="desktop-link">Counter Strike GO</a>
-                    <input type="checkbox" id="show-items">
-                    <label for="show-items">Items</label>
-                    <ul>
-                      <li><a href="#">Skins</a></li>
-                      <li><a href="#">Canecas</a></li>
-                      <li><a href="#">Presentes</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
-          <form action="#" class="search-box">
-            <input type="text" placeholder="Pesquise alguma coisa...." required>
-            <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
-          </form>
-        </nav>
+      <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">ECOIN</label>
+        <ul>
+          <li><a class="active" href="#">Olá, Leonardo</a></li>
+          <li><a href="#">Carrinho</a></li>
+        </ul>
+      </nav>
+      
+      <div class="main-video">
+        <h1>ECOIN - SUA LOJA PREFERIDA GAMER</h1>
+        <video src="/cdn/images/valorant-video.mp4" autoplay loop></video>
       </div>
-        <div class="opacity">
-        <video autoplay muted loop id="myVideo">
-            <source src="cdn/images/video.mp4" type="video/mp4">
-          </video>
-        </div>
-          <h1>ECOIN SUA LOJA PREFERIDA DE COMPRA DE CRÉDITOS</h1>
     </header>
-
     <main>
-        <h1>Promoções</h1>
-
+      <h1>Promoções</h1>
         <section class="products">
             <div class="card">
                 <div class="imgBox">
@@ -108,7 +82,6 @@
               </div>
         </section>
         <h1>Battlefield</h1>
-
         <section class="products">
             <div class="card">
                 <div class="imgBox">
@@ -215,10 +188,9 @@
                 </div>
               </div>
         </section>
-        
     </main>
     <footer>
-        ECOIN
+        <p>&copy; ECOIN - SENAC - 2022</p>
     </footer>
   </body>
-</html>
+   
