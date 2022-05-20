@@ -10,7 +10,7 @@
 }
 
 body {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url(../images/League-of-Legends-Wallpaper-Full-HD-1920x1080.webp);
   background-position: center center;
   background-repeat: no-repeat;
@@ -380,7 +380,7 @@ main h1:nth-child(1) {
 .product-text {
   order: 2;
   margin-left: 1%;
-  margin-top: 50px;
+  margin-top: 9px;
 }
 
 .product-text h1 {
@@ -426,6 +426,16 @@ main h1:nth-child(1) {
   font-weight: 300;
 }
 
+summary{
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #f77e09;
+}
+
+summary details{
+  
+}
+
 footer {
   height: 7vh;
   width: 100vw;
@@ -434,6 +444,7 @@ footer {
   bottom: 0;
   left: 0;
   z-index: -1;
+  position: ;
 }
 
 footer p {
